@@ -23,9 +23,13 @@ def q20(n):
         ans += int(i)
     
     return ans
+
+
+def q30(n):
+    count = 0
+
     
 
-print(q20(100))
 
 
 
