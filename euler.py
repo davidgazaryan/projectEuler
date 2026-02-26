@@ -25,9 +25,31 @@ def q20(n):
     return ans
 
 
+
+#4) find largest palindrome from product of two 3 digit numbers
+
+def q4():
+    i = 500
+    j = 500
+    maxAns = 250000
+
+    maxI = 500
+    maxJ = 500
+
+    for i in range(500,999):
+        for j in range(i,999):
+            ans = str(i * j)
+            
+            if ans == ans[::-1] and int(ans) > maxAns:
+                maxI,maxJ,maxAns = i, j, int(ans)
+
+    return maxI,maxJ
+
+print(q4())
+
+
 def q30(n):
     count = 0
-
     
 
 
