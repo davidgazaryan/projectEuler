@@ -47,6 +47,16 @@ def q4():
 
 print(q4())
 
+def q16():
+    num = 2 ** 1000
+    count = 0
+
+    for i in str(num):
+        count += int(i)
+    return count 
+
+print(q16())
+
 
 def q30(n):
     count = 0
