@@ -58,6 +58,20 @@ def q16():
 print(q16())
 
 
+def q6():
+    sumSquares = 0
+    squareSums = 0
+
+    for i in range(1,101):
+        sumSquares += i ** 2
+        squareSums += i 
+    
+    squareSums = squareSums **2 
+
+    return squareSums - sumSquares 
+
+print(q6())
+
 def q30(n):
     count = 0
     
