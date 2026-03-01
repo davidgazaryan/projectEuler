@@ -75,7 +75,18 @@ print(q6())
 def q30(n):
     count = 0
     
+#What is the smallest positive number that is evenly 
+# ivisible by all of the numbers from 1-20
+def q5():
+    count = 5000
+    while True:
+        if all(count % i == 0 for i in range(1,21)):
+            return count
+        count += 20
+    
+print(q5())
 
+        
 
 
 
