@@ -71,9 +71,6 @@ def q6():
     return squareSums - sumSquares 
 
 print(q6())
-
-def q30(n):
-    count = 0
     
 #What is the smallest positive number that is evenly 
 # ivisible by all of the numbers from 1-20
@@ -84,8 +81,19 @@ def q5():
             return count
         count += 20
     
-print(q5())
+# print(q5())
 
+#find sum of even values in fibonacci sequence for values < 4,000,000
+
+def q2():
+    dp = [0] * 50
+    dp[1] = 1 
+    for i in range(2,50):
+        dp[i] = dp[i-1] + dp[i-2]
+        if dp[i] >= 4_000_000:
+            return sum(el for el in dp if el % 2 == 0)
+            
+print(q2())
         
 
 
