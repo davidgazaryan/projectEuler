@@ -47,6 +47,7 @@ def q4():
 
 print(q4())
 
+#Sum of the digits of number 2 ^ 1000
 def q16():
     num = 2 ** 1000
     count = 0
@@ -57,6 +58,8 @@ def q16():
 
 print(q16())
 
+#Find the difference between the sum of the squares of the 
+# first one hundred natural numbers and the square of the sum.
 
 def q6():
     sumSquares = 0
