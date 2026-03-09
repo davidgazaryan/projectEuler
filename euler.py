@@ -99,5 +99,20 @@ def q2():
 print(q2())
         
 
+def q12():
+
+    n = 1
+
+    while True:
+        if n % 2 == 0:
+            d = divisor_count(n//2) * divisor_count(n+1)
+        else:
+            d = divisor_count(n) * divisor_count((n+1)//2)
+
+        if d > 500:
+            print(n*(n+1)//2)
+            break
+
+        n += 1
 
 
