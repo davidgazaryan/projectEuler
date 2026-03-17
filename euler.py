@@ -115,4 +115,25 @@ def q12():
 
         n += 1
 
+def q366(N=10**18):
+    import math
+
+    phi = (1 + 5**0.5) / 2
+    phi2 = phi * phi
+
+    total = 0
+    k = 1
+
+    while True:
+        x = int(k * phi2)
+        if x > N:
+            break
+        total += x
+        k += 1
+
+    return total
+
+
+print(q366())
+
 
