@@ -137,3 +137,38 @@ def q366(N=10**18):
 print(q366())
 
 
+def q50(limit=1_000_000):
+
+    sieve = [True] * limit
+    sieve[0:2] = [False, False]
+    
+    for i in range(2, int(limit**0.5) + 1):
+        if sieve[i]:
+            for j in range(i * i, limit, i):
+                sieve[j] = False
+    
+    primes = [i for i, is_prime in enumerate(sieve) if is_prime]
+    prime_set = set(primes)
+    
+    prefix = [0]
+    for p in primes:
+        prefix.append(prefix[-1] + p)
+    
+    max_length = 0
+    result = 0
+    
+    for i in range(len(prefix)):
+        for j in range(i - max_length - 1):
+            current_sum = prefix[i] - prefix[j]
+            if current_sum >= limit:
+                break
+            if current_sum in prime_set:
+                max_length = i - j
+                result = current_sum
+    
+    return result, max_length
+
+
+print(q50())
+
+
