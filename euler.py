@@ -172,3 +172,23 @@ def q50(limit=1_000_000):
 print(q50())
 
 
+
+def q80():
+    
+    getcontext().prec = 110
+
+    def digital_sum_of_sqrt(n):
+        root = Decimal(n).sqrt()
+        digits = str(root).replace('.', '')[:100]
+        return sum(int(d) for d in digits)
+
+    total = 0
+
+    for i in range(1, 101):
+        if int(i**0.5)**2 != i:  
+            total += digital_sum_of_sqrt(i)
+
+    return total
+
+print(q80())
+
