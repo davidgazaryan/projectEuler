@@ -214,3 +214,23 @@ def q81(filename="p081_matrix.txt"):
 
 print(q81())
 
+
+def q8():
+    
+
+    num = "73167176531330624919225119674426574742355349194934..."
+    digits = [int(d) for d in num]
+
+    max_prod = 0
+    window = 13
+
+    for i in range(len(digits) - window + 1):
+        slice_ = digits[i:i+window]
+        if 0 in slice_:
+            continue
+        p = prod(slice_)
+        max_prod = max(max_prod, p)
+
+    print(max_prod)
+
+q8()
